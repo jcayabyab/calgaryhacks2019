@@ -1,0 +1,1 @@
+export const FETCH_EXAMPLE = "FETCH_EXAMPLE";
