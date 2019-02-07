@@ -1,6 +1,10 @@
 import { combineReducers } from "redux";
-import exampleReducer from "./exampleReducer";
+import serverStatusReducer from "../dev/reducers/serverStatusReducer";
 
-export default combineReducers({
-  example: exampleReducer
+//This is the root reducer object for the project. Any reducers should be created in external files in the reducers directory and imported into here, just like sampleIncrementReducer. The reducer name must then be added to the combineReducers() call below.
+
+const reducers = combineReducers({
+  serverStatus: serverStatusReducer
 });
+
+export default reducers;

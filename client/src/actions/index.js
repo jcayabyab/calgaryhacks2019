@@ -1,7 +1,10 @@
-import axios from "axios";
-import { FETCH_EXAMPLE } from "./types";
+/**
+ * Turns a route and a request body into a URL for HTTP requests.
+ * @param {string} route The HTTP route to be accessed in the route
+ * @param {Object} body JS object to be sent to the backend server
+ */
+export const getQueryString = (route, body) => {
+  const queries = Object.keys(body).map(key => `${key}=${body[key]}`);
 
-export const fetchExample = () => async dispatch => {
-  const res = await axios.get("/example");
-  dispatch({ type: FETCH_EXAMPLE, payload: res.data });
+  return `/api/${route}?${queries.join("&")}`;
 };

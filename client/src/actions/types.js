@@ -1,1 +1,1 @@
-export const FETCH_EXAMPLE = "FETCH_EXAMPLE";
+export const CHECK_SERVER = "CHECK_SERVER";

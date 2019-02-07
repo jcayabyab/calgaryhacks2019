@@ -30,8 +30,6 @@
     "concurrently": "^3.6.1",
     "express": "^4.16.4",
     "mongoose": "^5.4.5",
-    "nodemon": "^1.18.9",
-    "redux-form": "^7.4.2",
-    "redux-thunk": "^2.3.0"
+    "nodemon": "^1.18.9"
   }
 }

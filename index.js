@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const keys = require("./config/keys");
 const bodyParser = require("body-parser");
 require("./services/exampleService");
-require("./models/Example");
 
 mongoose.connect(keys.mongoURI);
 
@@ -14,6 +13,7 @@ app.use(bodyParser.json());
 
 // routes go here
 require("./routes/exampleRoutes")(app);
+require("./routes/devRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
