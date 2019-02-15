@@ -35,7 +35,17 @@ class CalculatorHome extends Component {
             </li>
             <li>
               {
+                "Create a route to /api/calculator/negative that returns a JS object of the type {result: *negative*}"
+              }
+            </li>
+            <li>
+              {
                 "Create a route to /api/calculator/double that returns a JS object of the type {result: *double the input*}"
+              }
+            </li>
+            <li>
+              {
+                "Create a route to /api/calculator/padzeros that returns a JS object of the type {result: *string padded zeros*}"
               }
             </li>
             <li>
