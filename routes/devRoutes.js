@@ -24,4 +24,8 @@ module.exports = app => {
     // HTTP request and sends the object back to the front end.
     res.send({ result: Math.pow(number, 2) });
   });
+
+  app.post("/api/calcuator/negative", (req, res) => {
+    // Implement the negative of the number
+  })
 };
