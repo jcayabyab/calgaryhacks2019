@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // routes go here
-require("./routes/exampleRoutes")(app);
+require("./routes/serverRoutes")(app);
 require("./routes/devRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {

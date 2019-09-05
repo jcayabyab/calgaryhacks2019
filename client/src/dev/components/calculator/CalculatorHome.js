@@ -3,7 +3,7 @@ import axios from "axios";
 import CalcField from "./CalcField";
 
 class CalculatorHome extends Component {
-  state = { double: "", square: "", reverse: "" };
+  state = { double: "", negative: "", square: "", reverse: "" };
 
   /**
    * Handles the request sending and state updating
@@ -35,7 +35,17 @@ class CalculatorHome extends Component {
             </li>
             <li>
               {
+                "Create a route to /api/calculator/negative that returns a JS object of the type {result: *negative*}"
+              }
+            </li>
+            <li>
+              {
                 "Create a route to /api/calculator/double that returns a JS object of the type {result: *double the input*}"
+              }
+            </li>
+            <li>
+              {
+                "Create a route to /api/calculator/padzeros that returns a JS object of the type {result: *string padded zeros*}"
               }
             </li>
             <li>
@@ -51,9 +61,19 @@ class CalculatorHome extends Component {
           result={this.state.square}
         />
         <CalcField
+          label="Calculate the negative of a number!"
+          onSubmit={input => this.handleRequest("negative", input)}
+          result={this.state.negative}
+        />
+        <CalcField
           label="Calculate the double of a number!"
           onSubmit={input => this.handleRequest("double", input)}
           result={this.state.double}
+        />
+        <CalcField
+          label="Pad with zeros!"
+          onSubmit={input => this.handleRequest("padzeros", input)}
+          result={this.state.padzeros}
         />
         <CalcField
           label="Get a reversed string!"
