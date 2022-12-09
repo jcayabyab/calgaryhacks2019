@@ -28,7 +28,7 @@
     "axios": "^0.18.1",
     "body-parser": "^1.18.3",
     "concurrently": "^3.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongoose": "^5.7.5",
     "nodemon": "^1.18.9"
   }
